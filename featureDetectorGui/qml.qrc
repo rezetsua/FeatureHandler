@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>LeftButton.qml</file>
+        <file>icon/find.png</file>
+        <file>icon/puzzle.png</file>
+        <file>icon/route.png</file>
+        <file>DetectorPage.qml</file>
+        <file>PlayButton.qml</file>
+        <file>icon/play.png</file>
+        <file>icon/play_check.png</file>
+        <file>icon/sync.png</file>
+        <file>DescriptorPage.qml</file>
+        <file>FlowPage.qml</file>
+        <file>icon/refresh.png</file>
+        <file>icon/refresh_check.png</file>
+    </qresource>
+</RCC>
