@@ -209,8 +209,9 @@ int CoreModule::opticalFlow(const string filename, int flow_enum, bool to_gray =
             double t = (double)getTickCount();
             Mat frame, frame_gray;
             capture >> frame;
-            if (frame.empty())
+            if (frame.empty()) {
                 break;
+            }
 
             //imshow("Frame", frame);
             QImage in_img = QImage(frame.data,frame.cols,frame.rows,QImage::Format_RGB888).rgbSwapped();
@@ -248,8 +249,8 @@ int CoreModule::opticalFlow(const string filename, int flow_enum, bool to_gray =
             p0 = good_new;
             t = ((double)getTickCount() - t)/getTickFrequency();
             flowFPS = 1/t;
-            qDebug() << "t" << t;
-            qDebug() << "FPS" << flowFPS;
+//            qDebug() << "t" << t;
+//            qDebug() << "FPS" << flowFPS;
             emit flowFPSChanged();
         }
     }
@@ -312,8 +313,8 @@ int CoreModule::opticalFlow(const string filename, int flow_enum, bool to_gray =
             counter++;
             t = ((double)getTickCount() - t)/getTickFrequency();
             flowFPS = 1/t;
-            qDebug() << "t" << t;
-            qDebug() << "FPS" << flowFPS;
+//            qDebug() << "t" << t;
+//            qDebug() << "FPS" << flowFPS;
             emit flowFPSChanged();
         }
     }
@@ -366,8 +367,8 @@ int CoreModule::opticalFlow(const string filename, int flow_enum, bool to_gray =
             prvs = next;
             t = ((double)getTickCount() - t)/getTickFrequency();
             flowFPS = 1/t;
-            qDebug() << "t" << t;
-            qDebug() << "FPS" << flowFPS;
+//            qDebug() << "t" << t;
+//            qDebug() << "FPS" << flowFPS;
             emit flowFPSChanged();
         }
     }
@@ -434,8 +435,8 @@ int CoreModule::opticalFlow(const string filename, int flow_enum, bool to_gray =
             counter++;
             t = ((double)getTickCount() - t)/getTickFrequency();
             flowFPS = 1/t;
-            qDebug() << "t" << t;
-            qDebug() << "FPS" << flowFPS;
+//            qDebug() << "t" << t;
+//            qDebug() << "FPS" << flowFPS;
             emit flowFPSChanged();
         }
     }

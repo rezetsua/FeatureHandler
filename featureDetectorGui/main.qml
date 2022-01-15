@@ -25,7 +25,7 @@ ApplicationWindow {
         property int index: 0
         title: "Please choose a file"
         folder: shortcuts.home
-        nameFilters: ["Image files (*.jpg *.png)"]
+        nameFilters: ["Image files (*.jpg *.png *.jpeg)"]
         onAccepted: {
             getPath(index)
         }
@@ -107,13 +107,13 @@ ApplicationWindow {
 
                     onCurrentIndexChanged: {
                         if (currentIndex == 0) {
-                            fileDialog.nameFilters = ["Image files (*.jpg *.png)"]
+                            fileDialog.nameFilters = ["Image files (*.jpg *.png *.jpeg)"]
                             b1.checked = true
                             b2.checked = false
                             b3.checked = false
                         }
                         else if (currentIndex == 1){
-                            fileDialog.nameFilters = ["Image files (*.jpg *.png)"]
+                            fileDialog.nameFilters = ["Image files (*.jpg *.png *.jpeg)"]
                             b1.checked = false
                             b2.checked = true
                             b3.checked = false

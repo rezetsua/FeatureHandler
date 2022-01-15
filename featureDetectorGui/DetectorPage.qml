@@ -187,6 +187,22 @@ Page {
                             fillMode: Image.PreserveAspectFit
                             source: ""
                         }
+
+                        Rectangle {
+                            anchors.fill: parent
+                            visible: (outputImage.source == "") ? true : false
+                            color: "transparent"
+
+                            Text {
+                                anchors.centerIn: parent
+                                horizontalAlignment: Text.AlignHCenter
+                                verticalAlignment:  Text.AlignVCenter
+                                wrapMode: Text.WordWrap
+                                text: "Результат работы\nалгоритма"
+                                font.pixelSize: 24
+                                color: borderColor
+                            }
+                        }
                     }
 
                     // Информация о производительности
